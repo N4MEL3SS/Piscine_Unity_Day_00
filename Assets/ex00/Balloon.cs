@@ -6,13 +6,18 @@ public class Balloon : MonoBehaviour
     [SerializeField] private GameObject balloonSprite;
     [SerializeField] private GameObject breathObject;
     
-    private float breath = 1f;
+    private float startTime = Time.time;
+    
+    void endGameBoom()
+    {
+        Debug.Log("Balloon life time: " + Mathf.RoundToInt(Time.time) + "s");
+        boomSprite.transform.position = new Vector3(0, 1, 0);
+        Destroy(balloonSprite);
+    }
     
     void endGame()
     {
         Debug.Log("Balloon life time: " + Mathf.RoundToInt(Time.time) + "s");
-        if (balloonSprite.transform.localScale.x > 5.0f);
-            boomSprite.transform.position = new Vector3(0, 1, 0);
         Destroy(balloonSprite);
     }
     
@@ -27,11 +32,13 @@ public class Balloon : MonoBehaviour
     void Update()
     {
         if (balloonSprite.transform.localScale.x > 5.0f)
+            endGameBoom();
+        if (Time.time - startTime > 15.0f)
             endGame();
         if (Input.GetKeyDown("space") && breathObject.transform.localScale.x > 0.1f)
         {
             breathObject.transform.localScale -= new Vector3(0.3f, 0, 0);
-            balloonSprite.transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
+            balloonSprite.transform.localScale += new Vector3(0.45f, 0.45f, 0.45f);
         }
         else
         {
