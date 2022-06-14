@@ -562,7 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boomSprite: {fileID: 1847507341}
   balloonSprite: {fileID: 2061573908}
-  breathObject: {fileID: 1306809030}
+  staminaSprite: {fileID: 1306809030}
 --- !u!1 &2108565471
 GameObject:
   m_ObjectHideFlags: 0
