@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &22709913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1509745400028811882, guid: c0d394d22938a47f78172e1e073922a6, type: 3}
-  m_PrefabInstance: {fileID: 4029095185571357306}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &418403898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5084732659683115238, guid: c0d394d22938a47f78172e1e073922a6, type: 3}
@@ -172,7 +167,6 @@ MonoBehaviour:
   pipe0: {fileID: 418403898}
   pipe1: {fileID: 1654953695}
   pipe2: {fileID: 835316296}
-  background: {fileID: 22709913}
 --- !u!212 &938984698
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -384,5 +378,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6265669138378193799, guid: c0d394d22938a47f78172e1e073922a6, type: 3}
+      propertyPath: bird
+      value: 
+      objectReference: {fileID: 938984696}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d394d22938a47f78172e1e073922a6, type: 3}
